@@ -1,24 +1,18 @@
 /*
-Surasti visus ingredientus ir ju pavadinimus atspauzdinti i console
+Surasti antraste ir prie jos prideti CSS klase, kuri pakeicia teksto spalva i raudona
 
-Visu ingredienu pavadinimai turi buti didziosiomis raidemis ir sudeti i array
-
-Isspausdinti gauta array i console
-
+Surasti visus ingredientus ir kiekvienam prideti klase darzove
 
 */
-//surandame sarasa esanti html'e
+
+const h1DOM = document.querySelector('h1');
+h1DOM.classList.add('antraste');
+
 const liDOM = document.querySelectorAll('li');
 console.log(liDOM);
 
-//sukuriame tuscia sarasa
-const ingredientai = [];
-
-//sukame cikla pagal html sarasa ir push. metodu sustumiame i sarasa + raides padarome didziosiomis 
 for (let i = 0; i < liDOM.length; i++) {
-    const ingredientas = liDOM[i].innerText.toUpperCase();
-    ingredientai.push(ingredientas)
+    liDOM[i].classList.add('darzove');
 }
 
 
-console.log(ingredientai);
