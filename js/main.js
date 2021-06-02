@@ -1,18 +1,24 @@
 /*
-Surasti antraste ir prie jos prideti CSS klase, kuri pakeicia teksto spalva i raudona
+Surasti h1 (antraste)
+Perreasyti h1 elemento teksta i "Zuikio pomidoru darzas"
+Padaryk, jog h1 elementas turetu CSS class "pavadinimas"
 
-Surasti visus ingredientus ir kiekvienam prideti klase darzove
-
+Surasti visas darzoves
+Kiekvienos darzoves teksta pakeisti i "Pomidoras"
+Kiekvienai darzovei suteikti CSS class "pomidoras"
 */
 
 const h1DOM = document.querySelector('h1');
-h1DOM.classList.add('antraste');
+h1DOM.innerText = "Zuikio pomidoru darzas";
+h1DOM.classList = "pavadinimas";
+
 
 const liDOM = document.querySelectorAll('li');
 console.log(liDOM);
 
 for (let i = 0; i < liDOM.length; i++) {
-    liDOM[i].classList.add('darzove');
+    liDOM[i].innerText = "Pomidoras";
+    liDOM[i].classList.add('pomidoras');
 }
 
 
