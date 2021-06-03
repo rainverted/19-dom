@@ -1,17 +1,20 @@
-/*const logoDOM = document.querySelector('.logo');
-const hamburgerDOM = document.querySelector('.hamburger');
+let rezultatas = 0;
 
-console.log(logoDOM);
-console.log(hamburgerDOM);
+const minusDOM = document.querySelector('.minus');
+const plusDOM = document.querySelector('.plus');
+const numberDOM = document.querySelector('.number');
 
-hamburgerDOM.addEventListener('click', () => {
-    logoDOM.classList.toggle('big');
-}) */
-
-const navDOM = document.querySelector('nav');
-const hamburgerDOM = document.querySelector('.hamburger');
-
-hamburgerDOM.addEventListener('click', () => {
-    navDOM.classList.toggle('visible');
-
+minusDOM.addEventListener('click', () => {
+    numberDOM.innerText = --rezultatas;
 })
+
+plusDOM.addEventListener('click', () => {
+    numberDOM.innerText = ++rezultatas;
+})
+
+numberDOM.addEventListener('click', () => {
+    rezultatas = 0;
+    numberDOM.innerText = rezultatas;
+})
+
+
