@@ -1,24 +1,17 @@
-/*
-Surasti h1 (antraste)
-Perreasyti h1 elemento teksta i "Zuikio pomidoru darzas"
-Padaryk, jog h1 elementas turetu CSS class "pavadinimas"
+/*const logoDOM = document.querySelector('.logo');
+const hamburgerDOM = document.querySelector('.hamburger');
 
-Surasti visas darzoves
-Kiekvienos darzoves teksta pakeisti i "Pomidoras"
-Kiekvienai darzovei suteikti CSS class "pomidoras"
-*/
+console.log(logoDOM);
+console.log(hamburgerDOM);
 
-const h1DOM = document.querySelector('h1');
-h1DOM.innerText = "Zuikio pomidoru darzas";
-h1DOM.classList = "pavadinimas";
+hamburgerDOM.addEventListener('click', () => {
+    logoDOM.classList.toggle('big');
+}) */
 
+const navDOM = document.querySelector('nav');
+const hamburgerDOM = document.querySelector('.hamburger');
 
-const liDOM = document.querySelectorAll('li');
-console.log(liDOM);
+hamburgerDOM.addEventListener('click', () => {
+    navDOM.classList.toggle('visible');
 
-for (let i = 0; i < liDOM.length; i++) {
-    liDOM[i].innerText = "Pomidoras";
-    liDOM[i].classList.add('pomidoras');
-}
-
-
+})
