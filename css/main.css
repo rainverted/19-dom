@@ -15,7 +15,9 @@ body {
   align-items: center;
   gap: 40px;
   min-height: 100vh;
+  position: fixed;
 }
+
 h1 {
   text-align: center;
 }
