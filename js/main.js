@@ -29,7 +29,7 @@ resetDOM.addEventListener('click', () => {
     rezultatas = 0;
     numberDOM.innerText = rezultatas;
     h1DOM.innerText = initialH1Text;
-    ulDOM.innerHTML += `<li>Paspaudei reset ir dabartinis rezultatas yra ${numberDOM.innerText}.</li>`;
+    ulDOM.innerHTML += `<li>Paspaudei reset ir dabartinis rezultatas yra ${rezultatas}.</li>`;
 })
 
 numberDOM.addEventListener('click', () => {
