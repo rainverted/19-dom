@@ -1,52 +1,36 @@
-function generuotiSocials(selector, icons) {
-    const iconsDOM = document.querySelector(selector);
-    if (selector === '' ||
-        typeof selector !== 'string') {
-        console.error('ERROR: nerastas elementas');
-        return false;
-    }
+function renderNav(selector, navList) {
 
-    if (!Array.isArray(icons) ||
-        icons.length === []) {
-        console.error('ERROR: negali buti tuscias array');
-        return false;
-    }
+    const headerDOM = document.querySelector('header');
+    const imgDOM = headerDOM.querySelector('.logo');
 
     let HTML = '';
-    for (let i = 0; i < icons.length; i++) {
-        if (typeof icons[i] === 'string' &&
-            icons[i] !== '') {
-            HTML += `<i class="fa fa-${icons[i]}"></i>`;
-            console.log(icons);
-        }
 
+    for (const navElement of navList) {
+        HTML += `<a href=${navElement.href}>${navElement.title}</a>`;
     }
-
-    iconsDOM.innerHTML = HTML;
+    //headerDOM.innerHTML = headerDOM.innerHTML + `<nav>${HTML}</nav>`;
+    //headerDOM.innerHTML += `<nav>${HTML}</nav>`;
+    imgDOM.insertAdjacentHTML("afterend", `<nav>${HTML}</nav>`);
 }
 
-const icons = ['facebook', 'twitter', 5, [], '', 'linkedin'];
 
-generuotiSocials('.socials', icons);
-
-
-
-/*function generuotiLenta(selector, count) {
-    const DOM = document.querySelector(selector);
-    if (!DOM) {
-        console.error('ERROR: nerastas elementas');
-        return false;
+const menu = [
+    {
+        href: '#',
+        title: 'Home'
+    },
+    {
+        href: '#',
+        title: 'Services'
+    },
+    {
+        href: '#',
+        title: 'About us'
+    },
+    {
+        href: '#',
+        title: 'Contact us'
     }
-    if (count < 0 || count % 1 !== 0) {
-        console.error('ERROR: skaicius turi buti teigiamas ir sveikasis');
-        return false;
-    }
-    let HTML = '';
-    for (let i = 1; i <= count; i++) {
-        HTML += `<div>${i}</div>`;
-    }
-    DOM.innerHTML = HTML;
-}
-generuotiLenta('.lenta', 8);
+];
 
-*/
+renderNav('header', menu);
