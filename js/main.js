@@ -8,11 +8,3 @@ function time(from, until) {
 
 time(1, 7);
 
-
-/*
-
-m = 0; 00
-m = 1; 15
-m = 2; 30
-
-*/
